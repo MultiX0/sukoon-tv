@@ -1,0 +1,26 @@
+{
+ "dusk": {
+  "en": "Dusk",
+  "ar": "الغروب"
+ },
+ "mist": {
+  "en": "Mist",
+  "ar": "الضباب"
+ },
+ "desert": {
+  "en": "Desert",
+  "ar": "الصحراء"
+ },
+ "earth": {
+  "en": "Earth",
+  "ar": "الطبيعة"
+ },
+ "space": {
+  "en": "Space",
+  "ar": "الفضاء"
+ },
+ "gradients": {
+  "en": "Gradients",
+  "ar": "تدرجات"
+ }
+}

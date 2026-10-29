@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The product name itself is generated from app/build.gradle.kts (brand_name). -->
+    <string name="dream_name">Lyrics and photos</string>
+
+    <string name="greet_morning">Good morning</string>
+    <string name="greet_afternoon">Good afternoon</string>
+    <string name="greet_evening">Good evening</string>
+
+    <string name="settings">Settings</string>
+    <string name="all_apps">All apps</string>
+    <string name="apps_title">Apps</string>
+    <string name="apps_hint">Hold OK for options</string>
+    <string name="edit_dock_title">Choose dock apps</string>
+    <string name="edit_dock_hint">OK adds or removes an app</string>
+
+    <string name="menu_add">Add to dock</string>
+    <string name="menu_remove">Remove from dock</string>
+    <string name="menu_left">Move left</string>
+    <string name="menu_right">Move right</string>
+    <string name="menu_hide">Hide app</string>
+    <string name="menu_unhide">Show app</string>
+    <string name="menu_info">App info</string>
+
+    <string name="np_fullscreen">Full screen</string>
+
+    <string name="s_wallpaper">Wallpaper</string>
+    <string name="s_clock">Clock</string>
+    <string name="s_lyrics">Lyrics</string>
+    <string name="s_dock">Dock</string>
+    <string name="s_language">Language</string>
+    <string name="s_weather">Weather</string>
+    <string name="s_about">About</string>
+    <string name="s_system">Android settings</string>
+
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="lang_en" translatable="false">English</string>
+    <string name="lang_ar" translatable="false">العربية</string>
+
+    <string name="w_rotation">Change every</string>
+    <string name="w_motion">Slow motion</string>
+    <string name="w_sets">Sets</string>
+    <string name="w_user_hint">Add your own photos in /sdcard/Wallpapers, one folder per set.</string>
+    <string name="w_allow">Allow access to photos</string>
+
+    <string name="c_24h">24-hour time</string>
+    <string name="c_24h_short">24-hour</string>
+    <string name="c_12h_short">12-hour</string>
+    <string name="c_seconds">Show seconds</string>
+
+    <string name="l_show">Show lyrics</string>
+    <string name="l_size">Text size</string>
+    <string name="l_small">Small</string>
+    <string name="l_medium">Medium</string>
+    <string name="l_large">Large</string>
+    <string name="l_delay">Full screen after</string>
+    <string name="l_bg">Full screen background</string>
+    <string name="l_bg_art">Album art</string>
+    <string name="l_bg_wall">Wallpaper</string>
+    <string name="l_access">Media access</string>
+    <string name="l_granted">Allowed</string>
+    <string name="l_missing">Not allowed</string>
+    <string name="l_try">Open full screen lyrics</string>
+    <string name="l_nothing">Nothing is playing</string>
+    <string name="l_credit">Time-synced lyrics come from LRCLIB.</string>
+
+    <string name="d_edit">Choose apps</string>
+    <string name="d_hidden">Hidden apps</string>
+    <string name="d_reset">Reset dock</string>
+    <string name="d_done">Done</string>
+    <string name="d_hint">On the home screen, hold OK on an app to move or remove it.</string>
+    <string name="d_none_hidden">No hidden apps.</string>
+    <string name="d_shown">Shown</string>
+
+    <string name="we_show">Show weather</string>
+    <string name="we_city">City</string>
+    <string name="we_city_hint">Type a city</string>
+    <string name="we_looking">Looking it up</string>
+    <string name="we_not_found">City not found</string>
+    <string name="we_units">Units</string>
+    <string name="we_c">Celsius</string>
+    <string name="we_f">Fahrenheit</string>
+    <string name="we_credit">Weather data from Open-Meteo.</string>
+
+    <string name="a_version">Version</string>
+    <string name="a_ram">Free memory</string>
+    <string name="a_ram_fmt">%1$s of %2$s</string>
+    <string name="a_uptime">Uptime</string>
+    <string name="a_uptime_fmt">%1$d d  %2$d h  %3$d min</string>
+    <string name="a_device">Device</string>
+    <string name="a_lyrics">Lyrics</string>
+    <string name="a_weather">Weather</string>
+    <string name="a_fonts">Fonts</string>
+
+    <string name="wx_clear">Clear</string>
+    <string name="wx_mostly_clear">Mostly clear</string>
+    <string name="wx_partly_cloudy">Partly cloudy</string>
+    <string name="wx_cloudy">Cloudy</string>
+    <string name="wx_fog">Fog</string>
+    <string name="wx_drizzle">Drizzle</string>
+    <string name="wx_rain">Rain</string>
+    <string name="wx_snow">Snow</string>
+    <string name="wx_showers">Showers</string>
+    <string name="wx_thunder">Thunderstorm</string>
+
+    <plurals name="minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d second</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+    <plurals name="apps_count">
+        <item quantity="one">%d app</item>
+        <item quantity="other">%d apps</item>
+    </plurals>
+
+    <!-- Customize -->
+    <string name="clock_hint">Hold OK to customize</string>
+    <string name="cz_title">Customize</string>
+    <string name="cz_hint">Up and down: part      Left and right: change      OK: next option      Back: done</string>
+    <string name="cz_clock">Clock</string>
+    <string name="cz_date">Date and greeting</string>
+    <string name="cz_dock">Dock</string>
+    <string name="cz_np">Now playing</string>
+    <string name="cz_wall">Wallpaper</string>
+    <string name="cz_text">Language and text</string>
+    <string name="cz_presets">Looks</string>
+    <string name="p_font">Font</string>
+    <string name="p_style">Style</string>
+    <string name="p_size">Size</string>
+    <string name="p_position">Position</string>
+    <string name="p_color">Color</string>
+    <string name="p_seconds">Seconds</string>
+    <string name="p_format">Format</string>
+    <string name="p_digits">Digits</string>
+    <string name="p_date">Date</string>
+    <string name="p_calendar">Calendar</string>
+    <string name="p_greeting">Greeting</string>
+    <string name="p_shape">Icon shape</string>
+    <string name="p_labels">App names</string>
+    <string name="p_sort">Sort</string>
+    <string name="p_lyrics_size">Lyrics size</string>
+    <string name="p_set">Set</string>
+    <string name="p_motion">Motion</string>
+    <string name="p_dim">Dim</string>
+    <string name="p_blur">Blur</string>
+    <string name="p_language">Language</string>
+    <string name="p_ui_font">Font</string>
+    <string name="p_look">Look</string>
+    <string name="v_line">One line</string>
+    <string name="v_stacked">Stacked</string>
+    <string name="v_outline">Outline</string>
+    <string name="v_s">Small</string>
+    <string name="v_m">Medium</string>
+    <string name="v_l">Large</string>
+    <string name="v_xl">Extra large</string>
+    <string name="v_pos_tl">Top corner</string>
+    <string name="v_pos_center">Center</string>
+    <string name="v_pos_bl">Bottom corner</string>
+    <string name="c_white">White</string>
+    <string name="c_auto">From wallpaper</string>
+    <string name="c_sand">Sand</string>
+    <string name="c_rose">Rose</string>
+    <string name="c_sky">Sky</string>
+    <string name="c_mint">Mint</string>
+    <string name="c_lilac">Lilac</string>
+    <string name="c_amber">Amber</string>
+    <string name="v_latin_digits">Latin 0-9</string>
+    <string name="v_arabic_digits">Arabic ٠-٩</string>
+    <string name="v_greg">Gregorian</string>
+    <string name="v_hijri">Hijri</string>
+    <string name="v_cards">Cards</string>
+    <string name="v_pill">Glass pill</string>
+    <string name="v_icons">Icons</string>
+    <string name="v_list">Text list</string>
+    <string name="v_squircle">Squircle</string>
+    <string name="v_circle">Circle</string>
+    <string name="v_rounded">Rounded square</string>
+    <string name="v_bottom">Bottom</string>
+    <string name="v_side">Side</string>
+    <string name="v_custom">Custom</string>
+    <string name="v_recent">Recent</string>
+    <string name="v_az">A to Z</string>
+    <string name="v_card">Card</string>
+    <string name="v_compact">Compact pill</string>
+    <string name="v_takeover">Full screen</string>
+    <string name="v_system">System</string>
+    <string name="look_pick">Pick a look</string>
+    <string name="look_default">Default</string>
+    <string name="look_calm">Calm</string>
+    <string name="look_cinema">Cinema</string>
+    <string name="look_arabic">Arabic</string>
+    <string name="look_minimal">Minimal</string>
+    <string name="s_customize">Customize</string>
+    <string name="s_system_tweaks">System</string>
+    <string name="sy_screensaver">Lyrics screensaver</string>
+    <string name="sy_lyrics_on">Lyrics</string>
+    <string name="sy_delay">Screensaver starts after</string>
+    <string name="sy_anim">Animation speed</string>
+    <string name="sy_note">These change Android settings for the whole TV.</string>
+    <string name="v_normal">Normal</string>
+    <string name="v_fast">Fast</string>
+    <string name="d_sort">Sort apps</string>
+    <string name="l_source_session">Media sessions</string>
+    <string name="l_source_dump">System media list</string>
+    <string name="l_source_broadcast">Spotify only</string>
+    <string name="menu_up">Move up</string>
+    <string name="menu_down">Move down</string>
+    <string name="np_demo_title">Your song</string>
+    <string name="np_demo_artist">Artist</string>
+    <string name="np_demo_l1">Lyrics show up here</string>
+    <string name="np_demo_l2">line by line, right on time</string>
+    <string name="np_demo_l3">with whatever is playing</string>
+    <string name="p_tile_art">Tile art</string>
+    <string name="v_art_banner">TV banner</string>
+    <string name="v_art_icon">App icon</string>
+    <string name="cz_k_part">part</string>
+    <string name="cz_k_change">change</string>
+    <string name="cz_k_next">next option</string>
+    <string name="cz_k_back">Back</string>
+    <string name="cz_k_done">done</string>
+    <!-- My looks -->
+    <string name="s_looks">My looks</string>
+    <string name="pr_default_name">My look</string>
+    <string name="pr_yours">Your look</string>
+    <string name="pr_save">Save the current look</string>
+    <string name="pr_undo">Undo the last look change</string>
+    <string name="pr_saved">Saved looks</string>
+    <string name="pr_none">No saved looks yet.</string>
+    <string name="pr_hint">A look keeps every setting: clock, date, dock and its apps, now playing, language, fonts, the wallpaper and your picked photos.</string>
+    <string name="pr_apply">Apply this look</string>
+    <string name="pr_replace">Replace with the current look</string>
+    <string name="pr_replaced">Saved</string>
+    <string name="pr_rename">Name</string>
+    <string name="pr_name_hint">Type a name</string>
+    <string name="pr_delete">Delete this look</string>
+    <!-- Updates (Settings > About) -->
+    <string name="u_check">Check for updates</string>
+    <string name="u_checking">Checking for updates…</string>
+    <string name="u_up_to_date">Up to date</string>
+    <string name="u_latest">You have the latest version (%1$s).</string>
+    <string name="u_install">Update to %1$s</string>
+    <string name="u_downloading">Downloading %1$s</string>
+    <string name="u_verifying">Checking the download…</string>
+    <string name="u_installing">Installing %1$s</string>
+    <string name="u_installing_hint">Confirm on the screen that opens. %1$s restarts by itself after the update.</string>
+    <string name="u_cancel_hint">Press OK to cancel.</string>
+    <string name="u_retry">Try again: update to %1$s</string>
+    <string name="u_hint">Updates come from the releases at ⁦github.com/%1$s⁩. Nothing is downloaded or installed until you choose to.</string>
+    <string name="u_no_notes">No release notes.</string>
+    <string name="u_badge">Update available</string>
+    <string name="u_updated">%1$s updated to %2$s</string>
+    <string name="u_this_box">This box</string>
+    <string name="r_offline">No connection</string>
+    <string name="r_offline_l">Check the internet connection and try again.</string>
+    <string name="r_no_releases">No releases yet</string>
+    <string name="r_no_releases_l">Nothing has been published at ⁦github.com/%1$s⁩ yet.</string>
+    <string name="r_rate">Try again later</string>
+    <plurals name="r_rate_l">
+        <item quantity="one">GitHub limits how often a device can check. Try again in %d minute.</item>
+        <item quantity="other">GitHub limits how often a device can check. Try again in %d minutes.</item>
+    </plurals>
+    <string name="r_bad">Unexpected reply</string>
+    <string name="r_bad_l">GitHub sent something unexpected. Try again later.</string>
+    <string name="r_no_apk">No app file</string>
+    <string name="r_no_apk_l">The latest release has no APK file to install.</string>
+    <string name="r_space">Not enough space</string>
+    <string name="r_space_l">Free some storage and try again.</string>
+    <string name="r_download">Download failed</string>
+    <string name="r_download_l">The download stopped. Check the connection and try again.</string>
+    <string name="r_corrupt">Damaged download</string>
+    <string name="r_corrupt_l">The file did not match what GitHub reported, so it was deleted. Try again.</string>
+    <string name="r_wrong_app">Wrong file</string>
+    <string name="r_wrong_app_l">The release file is not %1$s, so it was not installed.</string>
+    <string name="r_not_newer">Not newer</string>
+    <string name="r_not_newer_l">The release file is not newer than this version, so it was not installed.</string>
+    <string name="r_signature">Different signature</string>
+    <string name="r_signature_l">The update is not signed by the same developer as this copy, so Android refuses it. Install it from GitHub by hand.</string>
+    <string name="r_blocked">Permission needed</string>
+    <string name="r_blocked_l">Allow %1$s to install apps (Settings, Device Preferences, Security and restrictions, Unknown sources), then press OK again.</string>
+    <string name="r_install">Install failed</string>
+    <string name="r_install_l">Android could not install the update. Try again, or install it from GitHub.</string>
+    <string name="r_cancelled">Cancelled</string>
+    <string name="r_cancelled_l">Nothing was changed. Press OK to try again.</string>
+    <!-- Photo picker -->
+    <string name="w_use_set">Use the whole set</string>
+    <string name="w_use_picks">Use My picks</string>
+    <string name="w_pick_hint">Press OK on photos to add them to My picks</string>
+    <plurals name="w_picks">
+        <item quantity="one">My picks: %d photo. OK adds or removes a photo</item>
+        <item quantity="other">My picks: %d photos. OK adds or removes a photo</item>
+    </plurals>
+    <string name="np_demo_l4">and every word lights up as it is sung</string>
+    <string name="np_demo_l5">until the music fades into the stars</string>
+</resources>

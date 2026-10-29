@@ -1,0 +1,35 @@
+# Packages debloat.sh turns off on any Android TV or Google TV, with "pm disable-user" (never uninstalled, so
+# restore.sh brings them back). Packages your TV doesn't have are skipped. One package per line; text after # is a
+# note. Extras for one model go in devices/<model>.txt (the model as `adb shell getprop ro.product.model` prints it,
+# spaces replaced by underscores).
+#
+# Never add: anything for inputs/HDMI, the tuner, CEC, picture and sound, the remote (com.google.android.tv.remote.service
+# carries the mic on some remotes), TCL's com.tcl.suspension (Inputs button), Hisense smartsense packages, Philips
+# org.droidtv.*, com.droidlogic.* / com.mediatek.* / com.realtek.* system services. See the README's device table.
+
+# Stock home screens. Turned off only once Sukoon really is the home screen. On Google TV the setup wraith has to
+# go before launcherx, or it brings the old home screen back.
+com.google.android.tungsten.setupwraith           # Google TV: re-enables the stock home screen
+com.google.android.apps.tv.launcherx              # Google TV home screen
+com.google.android.tvlauncher                     # Android TV home screen
+com.google.android.leanbacklauncher               # older Android TV home screen
+com.google.android.leanbacklauncher.recommendations
+
+# Home screen widgets, ambient screensavers and live wallpaper (Sukoon's lyrics screensaver is set first)
+com.google.android.atv.widget
+com.google.android.backdrop                       # Android TV ambient mode
+com.google.android.apps.tv.dreamx                 # Google TV ambient mode
+com.google.android.landscape
+
+# Phone features and setup leftovers a TV doesn't use
+com.google.android.marvin.talkback                # screen reader (keep it if you use it)
+com.google.android.syncadapters.calendar
+com.google.android.syncadapters.contacts
+com.google.android.partnersetup
+com.google.android.feedback
+com.android.tv.feedbackconsent
+com.google.android.tv.bugreportsender
+com.android.printspooler
+com.android.bookmarkprovider
+com.android.egg
+com.android.traceur

@@ -1,0 +1,6 @@
+# Per-device backups contain the box serial
+scripts/backup/
+# Python caches from tools/
+__pycache__/
+# Reel prep notes stay local
+reel/

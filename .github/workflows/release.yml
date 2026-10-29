@@ -1,0 +1,81 @@
+# Pushing a tag like v1.2.0 builds the launcher, signs it with the release key and attaches
+# sukoon-launcher-1.2.0.apk to the GitHub release. Settings > About > Check for updates on the TV
+# reads that release, so every update must be signed with the same key as the installed copy.
+#
+# Repository secrets (Settings > Secrets and variables > Actions):
+#   SUKOON_KEYSTORE_B64   base64 of launcher/keystore/sukoon-release.jks
+#   SUKOON_STORE_PASSWORD, SUKOON_KEY_ALIAS, SUKOON_KEY_PASSWORD
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Signing key
+        id: key
+        env:
+          KEYSTORE_B64: ${{ secrets.SUKOON_KEYSTORE_B64 }}
+          STORE_PASSWORD: ${{ secrets.SUKOON_STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.SUKOON_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.SUKOON_KEY_PASSWORD }}
+        run: |
+          # Without the real key the APK would be signed with a debug key, and every TV would refuse the update.
+          # A release made by hand (APK uploaded in the browser) has no secrets to use: the build is skipped.
+          if [ -z "$KEYSTORE_B64" ] || [ -z "$STORE_PASSWORD" ] || [ -z "$KEY_ALIAS" ] || [ -z "$KEY_PASSWORD" ]; then
+            echo "::notice::No signing secrets set, so no APK is built. Upload a signed APK to the release by hand."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p launcher/keystore
+          echo "$KEYSTORE_B64" | base64 -d > launcher/keystore/release.jks
+          {
+            echo "storeFile=keystore/release.jks"
+            echo "storePassword=$STORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > launcher/keystore.properties
+
+      - uses: android-actions/setup-android@v3
+        if: steps.key.outputs.skip != 'true'
+
+      - name: Test and build
+        if: steps.key.outputs.skip != 'true'
+        working-directory: launcher
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon :app:testDebugUnitTest :app:assembleRelease -PversionName="${GITHUB_REF_NAME#v}"
+
+      - name: Publish
+        if: steps.key.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          apk="sukoon-launcher-$version.apk"
+          cp launcher/app/build/outputs/apk/release/app-release.apk "$apk"
+          # The same file under a fixed name, so .../releases/latest/download/sukoon-launcher.apk always works.
+          cp "$apk" sukoon-launcher.apk
+          # A release written by hand keeps its notes; otherwise GitHub writes them from the commits.
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "$apk" sukoon-launcher.apk --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" "$apk" sukoon-launcher.apk --title "Sukoon $version" --generate-notes
+          fi
+
+      - name: Remove the key
+        if: always()
+        run: rm -f launcher/keystore/release.jks launcher/keystore.properties

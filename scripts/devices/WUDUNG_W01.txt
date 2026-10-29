@@ -1,0 +1,18 @@
+# WUDUNG W01 / Tanix (Allwinner H313, Android TV 10, 2 GB). Measured on this box: used RAM 621 MB -> 521 MB.
+
+com.google.android.tvrecommendations              # the promo rows (Netflix, Disney+, Prime)
+com.google.android.katniss                        # voice search, about 48 MB of RAM; the remote has no mic
+com.google.android.tv.remote.service              # phone-remote service, 18 MB, always running
+com.android.inputmethod.latin                     # phone keyboard, 14 MB; the TV keyboard (leanback.ime) replaces it
+com.android.music
+
+# Vendor reporting, factory test and update services
+com.oranth.accessibility                          # vendor agent with reboot/recovery rights, 12 MB, always running
+com.oranth.deviceinforeport                       # sends device info home
+com.oranth.upgradeapplication                     # vendor app updater
+com.oranth.factory                                # factory test app
+com.oranth.homepicker                             # "choose a home app" nag
+com.oranth.atvapplist                             # app list of the vendor launcher
+com.softwinner.update                             # OTA updater
+com.softwinner.awlogsettings                      # system log service
+com.droidlogic.otaupgrade                         # second OTA updater (only this one: other droidlogic packages run HDMI)

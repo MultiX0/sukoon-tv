@@ -1,0 +1,13 @@
+.gradle/
+.kotlin/
+build/
+*/build/
+.idea/
+*.iml
+local.properties
+# Signing secrets never go in git.
+keystore.properties
+keystore/
+*.jks
+dist/
+screenshots/
